@@ -440,7 +440,7 @@ body{
   position:relative;
   background:
     linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-    url("../img/interior2.jpg") center/cover no-repeat;
+    url("/img/interior2.jpg") center/cover no-repeat;
   color:white;
   padding:20px 20px; /* 👈 reduce altura */
   text-align:center;

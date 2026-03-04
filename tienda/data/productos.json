@@ -7,7 +7,7 @@
     "precioAntes": 6600,
     "descuento": 20,
     "descripcion": "CAMA FAMILIAR ",
-    "imagen": "img/cama1.jpg",
+    "imagen": "/img/cama1.jpg",
     "oferta": false,
     "carousel": true
   },
@@ -19,7 +19,7 @@
     "precioAntes": 7600,
     "descuento": 10,
     "descripcion": "Celular inteligente",
-    "imagen": "img/celu1.png",
+    "imagen": "/img/celu1.png",
     "oferta": true,
     "carousel": true
   },
@@ -31,7 +31,7 @@
     "precioAntes": 6600,
     "descuento": 20,
     "descripcion": "Celular inteligente",
-    "imagen": "img/celu2.png",
+    "imagen": "/img/celu2.png",
     "oferta": false,
     "carousel": true
   },
@@ -43,7 +43,7 @@
     "precioAntes": 7800,
     "descuento": 10,
     "descripcion": "Colchon de calidad",
-    "imagen": "img/colchon.jpg",
+    "imagen": "/img/colchon.jpg",
     "oferta": true,
     "carousel": true
   },
@@ -55,7 +55,7 @@
     "precioAntes": 6500,
     "descuento": 20,
     "descripcion": "rellenas",
-    "imagen": "img/glacitas.jpg",
+    "imagen": "/img/glacitas.jpg",
     "oferta": true,
     "carousel": true
   },
@@ -67,7 +67,7 @@
     "precioAntes": 7600,
     "descuento": 10,
     "descripcion": "aceite",
-    "imagen": "img/atuncalidad.jpg",
+    "imagen": "/img/atuncalidad.jpg",
     "oferta": true,
     "carousel": true
   },
@@ -79,7 +79,7 @@
     "precioAntes": 6600,
     "descuento": 20,
     "descripcion": "Galletas",
-    "imagen": "img/muuleche.jpg",
+    "imagen": "/img/muuleche.jpg",
     "oferta": false,
     "carousel": true
   },
@@ -104,7 +104,7 @@
     "precioAntes": 6600,
     "descuento": 20,
     "descripcion": "Hamburguesa",
-    "imagen": "img/hambur1.jpg",
+    "imagen": "/img/hambur1.jpg",
     "oferta": false,
     "carousel": true
   },
@@ -116,7 +116,7 @@
     "precioAntes": 7800,
     "descuento": 10,
     "descripcion": "Hamburguesa",
-    "imagen": "img/hambur2.jpg",
+    "imagen": "/img/hambur2.jpg",
     "oferta": true,
     "carousel": true
   },
@@ -131,7 +131,7 @@
     "precioAntes": 6600,
     "descuento": 20,
     "descripcion": "Moto",
-    "imagen": "img/moto1.png",
+    "imagen": "/img/moto1.png",
     "oferta": true,
     "carousel": true
   },
@@ -143,7 +143,7 @@
     "precioAntes": 7800,
     "descuento": 10,
     "descripcion": "Computador Portátil",
-    "imagen": "img/pc.png",
+    "imagen": "/img/pc.png",
     "oferta": true,
     "carousel": true
   },
@@ -160,7 +160,7 @@
     "precioAntes": 6600,
     "descuento": 20,
     "descripcion": "Belleza",
-    "imagen": "img/maqui1.jpg",
+    "imagen": "/img/maqui1.jpg",
     "oferta": true,
     "carousel": true
   },
@@ -172,7 +172,7 @@
     "precioAntes": 7800,
     "descuento": 10,
     "descripcion": "Belleza",
-    "imagen": "img/maqui2.png",
+    "imagen": "/img/maqui2.png",
     "oferta": false,
     "carousel": true
   },
@@ -186,7 +186,7 @@
     "precioAntes": 6600,
     "descuento": 20,
     "descripcion": "Belleza",
-    "imagen": "img/maqui3.png",
+    "imagen": "/img/maqui3.png",
     "oferta": true,
     "carousel": true
   },
@@ -198,7 +198,7 @@
     "precioAntes": 7800,
     "descuento": 10,
     "descripcion": "Sillon de calidad",
-    "imagen": "img/sillon.jpg",
+    "imagen": "/img/sillon.jpg",
     "oferta": false,
     "carousel": true
   },
@@ -212,7 +212,7 @@
     "precioAntes": 6600,
     "descuento": 20,
     "descripcion": "Sandwich",
-    "imagen": "img/samdwi.jpg",
+    "imagen": "/img/samdwi.jpg",
     "oferta": false,
     "carousel": true
   }
