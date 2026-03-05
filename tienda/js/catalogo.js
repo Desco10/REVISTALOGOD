@@ -10,15 +10,14 @@ fetch("data/productos.json")
   .then(res => res.json())
   .then(data => {
     productosGlobal = data;
-    productosFiltrados = data; // copia inicial
+    productosFiltrados = data;
     renderizarPagina();
   })
   .catch(err => console.error("Error cargando productos:", err));
 
-
-
 let primerClickRealizado = false;
-// ===============================
+
+
 // ===============================
 // RENDERIZAR PRODUCTOS
 // ===============================
@@ -35,10 +34,6 @@ function renderizarPagina(){
 
   productosPagina.forEach(prod => {
 
-    // 👉 URL del producto (cuando tu web esté online)
-    const productoURL = window.location.origin + "/tienda/producto/" + prod.slug + ".html";
-    
-    // 👉 calcular ahorro automático
     const ahorro = prod.precioAntes
       ? prod.precioAntes - prod.precio
       : 0;
@@ -49,10 +44,13 @@ function renderizarPagina(){
 
     grid.innerHTML += `
       <div class="producto">
-        <img src="${prod.imagen}" class="producto-img"
-             onclick="agregarAlPedido('${prod.nombre}', ${prod.precio}, '${productoURL}')">
+
+        <img src="${prod.imagen}" 
+             class="producto-img"
+             onclick="agregarAlPedidoProducto(${prod.id})">
 
         <div class="producto-info">
+
           ${porcentaje ? `<span class="producto-descuento">${porcentaje}% OFF</span>` : ""}
           ${prod.oferta ? `<span class="producto-descuento">OFERTA</span>` : ""}
 
@@ -65,7 +63,9 @@ function renderizarPagina(){
             <div class="precio-antes">$${prod.precioAntes}</div>
             <div class="ahorro">Ahorras $${ahorro}</div>
           ` : ""}
+
         </div>
+
       </div>
     `;
   });
@@ -75,21 +75,23 @@ function renderizarPagina(){
 
 
 
-// PEDIDO WHATSAPP INTELIGENTE
 // ===============================
-
-// PEDIDO WHATSAPP INTELIGENTE
+// ENVIAR PRODUCTO A WHATSAPP
 // ===============================
+function agregarAlPedidoProducto(id){
 
-function agregarAlPedido(nombre, precio, url){
+  const prod = productosGlobal.find(p => p.id === id);
+  if(!prod) return;
+
+  const productoURL = window.location.origin + "/tienda/producto/" + prod.slug + ".html";
 
   let mensaje = "";
 
   if(!primerClickRealizado){
-    mensaje = `${CONFIG.mensajes.producto.primero} ${nombre} - $${precio}\n${url}`;
+    mensaje = `${CONFIG.mensajes.producto.primero} ${prod.nombre} - $${prod.precio}\n${productoURL}`;
     primerClickRealizado = true;
   } else {
-    mensaje = `${CONFIG.mensajes.producto.extra} ${nombre} - $${precio}\n${url}`;
+    mensaje = `${CONFIG.mensajes.producto.extra} ${prod.nombre} - $${prod.precio}\n${productoURL}`;
   }
 
   const wa = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(mensaje)}`;
@@ -97,42 +99,57 @@ function agregarAlPedido(nombre, precio, url){
   window.open(wa, "_blank");
 }
 
-window.agregarAlPedido = agregarAlPedido;
+window.agregarAlPedidoProducto = agregarAlPedidoProducto;
+
 
 
 // ===============================
 // PAGINACIÓN
 // ===============================
 function actualizarInfoPagina(){
+
   const info = document.getElementById("pageInfo");
   if(!info) return;
 
   const totalPaginas = Math.ceil(productosFiltrados.length / productosPorPagina);
+
   info.textContent = `Página ${paginaActual} de ${totalPaginas}`;
 }
 
+
 const nextBtn = document.getElementById("nextPage");
 if(nextBtn){
+
   nextBtn.addEventListener("click", () => {
+
     const totalPaginas = Math.ceil(productosFiltrados.length / productosPorPagina);
+
     if(paginaActual < totalPaginas){
       paginaActual++;
       renderizarPagina();
       window.scrollTo({ top:0, behavior:"smooth" });
     }
+
   });
+
 }
+
 
 const prevBtn = document.getElementById("prevPage");
 if(prevBtn){
+
   prevBtn.addEventListener("click", () => {
+
     if(paginaActual > 1){
       paginaActual--;
       renderizarPagina();
       window.scrollTo({ top:0, behavior:"smooth" });
     }
+
   });
+
 }
+
 
 
 // ===============================
@@ -145,17 +162,16 @@ function filtrar(categoria){
   if(categoria === "todos"){
     productosFiltrados = productosGlobal;
   } else {
-    productosFiltrados = productosGlobal.filter(p =>
-      p.categoria === categoria
-    );
+    productosFiltrados = productosGlobal.filter(p => p.categoria === categoria);
   }
 
   renderizarPagina();
 }
 
 
+
 // ===============================
-// MENU LATERAL + OVERLAY
+// MENU LATERAL
 // ===============================
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -163,17 +179,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const overlay = document.getElementById("overlay");
 
   window.toggleMenu = function () {
+
     if(!sidebar || !overlay) return;
+
     sidebar.classList.toggle("active");
     overlay.classList.toggle("active");
+
   };
 
-  // cerrar tocando afuera
   if(overlay){
+
     overlay.addEventListener("click", () => {
+
       sidebar.classList.remove("active");
       overlay.classList.remove("active");
+
     });
+
   }
 
 });
