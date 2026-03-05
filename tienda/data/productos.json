@@ -91,7 +91,7 @@
     "precioAntes": 7800,
     "descuento": 10,
     "descripcion": "Atún",
-    "imagen": "img/tinaparoja.jpg",
+    "imagen": "/img/tinaparoja.jpg",
     "oferta": true,
     "carousel": true
   },
