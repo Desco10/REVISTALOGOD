@@ -17,6 +17,7 @@
 <meta property="og:url" content="https://revistalogo.netlify.app/tienda/producto/{{SLUG}}.html">
 
 <link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/producto.css">
 
 </head>
 
@@ -26,7 +27,7 @@
 
 <img class="producto-img" src="{{IMAGEN}}" alt="{{NOMBRE}}">
 
-<h1>{{NOMBRE}}</h1>
+<h1 class="producto-titulo">{{NOMBRE}}</h1>
 
 <p class="producto-desc">
 {{DESCRIPCION}}
@@ -36,13 +37,19 @@
 $ {{PRECIO}}
 </div>
 
-<a class="btn-whatsapp"
+<div class="producto-botones">
+
+<a class="btn btn-whatsapp"
 href="https://wa.me/57246030396?text=Hola quiero comprar {{NOMBRE}} https://revistalogo.netlify.app/tienda/producto/{{SLUG}}.html"
 target="_blank">
-
 Comprar por WhatsApp
-
 </a>
+
+<a href="javascript:history.back()" class="btn btn-volver">
+← Volver al catálogo
+</a>
+
+</div>
 
 </div>
 
