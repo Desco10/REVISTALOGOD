@@ -2,6 +2,7 @@
   {
     "id": 1,
     "nombre": "Cama",
+    "slug": "cama",
     "categoria": "Hogar",
     "precio": 5300,
     "precioAntes": 6600,
@@ -14,6 +15,7 @@
   {
     "id": 2,
     "nombre": "Celular",
+    "slug": "celular",
     "categoria": "Electrónica",
     "precio": 6800,
     "precioAntes": 7600,
@@ -26,6 +28,7 @@
   {
     "id": 3,
     "nombre": "Celular",
+    "slug": "celular2",
     "categoria": "Electrónica",
     "precio": 5300,
     "precioAntes": 6600,
@@ -38,6 +41,7 @@
   {
     "id": 4,
     "nombre": "Colchon",
+    "slug": "colchon",
     "categoria": "Hogar",
     "precio": 6800,
     "precioAntes": 7800,
@@ -50,6 +54,7 @@
   {
     "id": 5,
     "nombre": "Galletas Festival",
+    "slug": "galletas-festival",
     "categoria": "snacks",
     "precio": 5300,
     "precioAntes": 6500,
@@ -62,6 +67,7 @@
   {
     "id": 6,
     "nombre": "Atún Van Camps",
+    "slug": "atun-van-camps",
     "categoria": "enlatados",
     "precio": 6800,
     "precioAntes": 7600,
@@ -74,6 +80,7 @@
   {
     "id": 7,
     "nombre": "Galletas GLACITAS",
+    "slug": "galletas-glacitas",
     "categoria": "snacks",
     "precio": 5300,
     "precioAntes": 6600,
@@ -86,6 +93,7 @@
   {
     "id": 8,
     "nombre": "SARDINA CALIDAD",
+    "slug": "sardina-calidad",
     "categoria": "enlatados",
     "precio": 6800,
     "precioAntes": 7800,
@@ -99,6 +107,7 @@
   {
     "id": 9,
     "nombre": "Hamburguesa",
+    "slug": "hamburguesa",
     "categoria": "Comidas",
     "precio": 5300,
     "precioAntes": 6600,
@@ -111,6 +120,7 @@
   {
     "id": 10,
     "nombre": "Hamburguesa",
+    "slug": "hamburguesa2",
     "categoria": "Comidas",
     "precio": 6800,
     "precioAntes": 7800,
@@ -126,6 +136,7 @@
   {
     "id": 11,
     "nombre": "Moto",
+    "slug": "moto",
     "categoria": "Electrónica",
     "precio": 5300,
     "precioAntes": 6600,
@@ -138,6 +149,7 @@
   {
     "id": 12,
     "nombre": "Computador Portátil",
+    "slug": "computador-portatil",
     "categoria": "Electrónica",
     "precio": 6800,
     "precioAntes": 7800,
@@ -155,6 +167,7 @@
   {
     "id": 13,
     "nombre": "Maquillaje",
+    "slug": "maquillaje",
     "categoria": "Belleza",
     "precio": 5300,
     "precioAntes": 6600,
@@ -167,6 +180,7 @@
   {
     "id": 14,
     "nombre": "Maquillaje",
+    "slug": "maquillaje2",
     "categoria": "Belleza",
     "precio": 6800,
     "precioAntes": 7800,
@@ -181,6 +195,7 @@
   {
     "id": 15,
     "nombre": "Maquillaje",
+    "slug": "maquillaje3",
     "categoria": "Belleza",
     "precio": 5300,
     "precioAntes": 6600,
@@ -193,6 +208,7 @@
   {
     "id": 16,
     "nombre": "Sillon",
+    "slug": "sillon",
     "categoria": "Hogar",
     "precio": 6800,
     "precioAntes": 7800,
@@ -205,8 +221,9 @@
 
 
   {
-    "id": 9,
-    "nombre": "Samdwich",
+    "id": 17,
+    "nombre": "Sandwich",
+    "slug": "sandwich",
     "categoria": "Comidas",
     "precio": 5300,
     "precioAntes": 6600,
