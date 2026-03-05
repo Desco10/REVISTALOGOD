@@ -5,36 +5,43 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>{{nombre}}</title>
+<title>{{NOMBRE}}</title>
 
-<meta name="description" content="{{descripcion}}">
+<meta name="description" content="{{DESCRIPCION}}">
 
-<meta property="og:title" content="{{nombre}}">
-<meta property="og:description" content="{{descripcion}}">
-<meta property="og:image" content="{{imagen}}">
+<!-- OpenGraph (WhatsApp / Facebook preview) -->
+<meta property="og:title" content="{{NOMBRE}}">
+<meta property="og:description" content="{{DESCRIPCION}}">
+<meta property="og:image" content="https://revistalogo.netlify.app{{IMAGEN}}">
 <meta property="og:type" content="product">
+<meta property="og:url" content="https://revistalogo.netlify.app/tienda/producto/{{SLUG}}.html">
 
-<meta property="og:url" content="{{url}}">
-
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="../css/style.css">
 
 </head>
 
 <body>
 
-<div class="producto-container">
+<div class="producto-page">
 
-<img src="../{{imagen}}" alt="{{nombre}}">
+<img class="producto-img" src="{{IMAGEN}}" alt="{{NOMBRE}}">
 
-<h1>{{nombre}}</h1>
+<h1>{{NOMBRE}}</h1>
 
-<p>{{descripcion}}</p>
+<p class="producto-desc">
+{{DESCRIPCION}}
+</p>
 
-<h2>$ {{precio}}</h2>
+<div class="producto-precio">
+$ {{PRECIO}}
+</div>
 
-<a class="btn-comprar"
-href="https://wa.me/573246030396?text=Hola quiero comprar {{nombre}}">
+<a class="btn-whatsapp"
+href="https://wa.me/57246030396?text=Hola quiero comprar {{NOMBRE}} https://revistalogo.netlify.app/tienda/producto/{{SLUG}}.html"
+target="_blank">
+
 Comprar por WhatsApp
+
 </a>
 
 </div>
