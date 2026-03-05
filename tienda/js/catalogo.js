@@ -36,8 +36,7 @@ function renderizarPagina(){
   productosPagina.forEach(prod => {
 
     // 👉 URL del producto (cuando tu web esté online)
-    const productoURL = window.location.origin + "/" + prod.imagen;
-
+    const productoURL = window.location.origin + "/tienda/producto/" + prod.slug + ".html";
     // 👉 calcular ahorro automático
     const ahorro = prod.precioAntes
       ? prod.precioAntes - prod.precio

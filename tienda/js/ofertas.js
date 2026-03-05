@@ -52,7 +52,7 @@ function mostrarOfertas(lista){
 
   lista.forEach(prod => {
 
-    const productoURL = window.location.origin + "/" + prod.imagen;
+    const productoURL = window.location.origin + "/tienda/producto/" + prod.slug + ".html";
 
     // 👉 calcular ahorro automático
     const precioAntes = prod.precioAntes || null;
