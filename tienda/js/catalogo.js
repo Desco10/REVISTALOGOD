@@ -78,6 +78,8 @@ function renderizarPagina(){
 // ===============================
 // ENVIAR PRODUCTO A WHATSAPP
 // ===============================
+// ENVIAR PRODUCTO A WHATSAPP
+// ===============================
 function agregarAlPedidoProducto(id){
 
   const prod = productosGlobal.find(p => p.id === id);
@@ -88,10 +90,27 @@ function agregarAlPedidoProducto(id){
   let mensaje = "";
 
   if(!primerClickRealizado){
-    mensaje = `${CONFIG.mensajes.producto.primero} ${prod.nombre} - $${prod.precio}\n${productoURL}`;
+
+    mensaje =
+`🛒 Producto recomendado
+⭐⭐⭐⭐⭐
+
+Hola, quiero comprar este producto:
+${prod.nombre} - $${prod.precio}
+
+${productoURL}`;
+
     primerClickRealizado = true;
+
   } else {
-    mensaje = `${CONFIG.mensajes.producto.extra} ${prod.nombre} - $${prod.precio}\n${productoURL}`;
+
+    mensaje =
+`🛒 También quiero agregar este producto:
+
+${prod.nombre} - $${prod.precio}
+
+${productoURL}`;
+
   }
 
   const wa = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(mensaje)}`;
@@ -100,7 +119,6 @@ function agregarAlPedidoProducto(id){
 }
 
 window.agregarAlPedidoProducto = agregarAlPedidoProducto;
-
 
 
 // ===============================
