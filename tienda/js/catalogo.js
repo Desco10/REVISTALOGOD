@@ -128,7 +128,7 @@ ${productoURL}`;
 ${prod.nombre}
 Precio: $${prod.precio}
 
-${productoURL}`;
+`;
 
   }
 
