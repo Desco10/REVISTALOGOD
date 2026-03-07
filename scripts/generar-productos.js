@@ -45,12 +45,17 @@ productos.forEach(prod => {
     return;
   }
 
-  const urlProducto = `${dominio}/tienda/producto/${prod.slug}.html`;
+  // URL corta para compartir
+  const urlPublica = `${dominio}/p/${prod.slug}`;
+
+  // URL real del archivo
+  const urlReal = `${dominio}/tienda/producto/${prod.slug}.html`;
+
   const imagenOG = `${dominio}${prod.imagen}`;
 
-  // link whatsapp
+  // link whatsapp con URL corta
   const mensaje = encodeURIComponent(
-    `Hola como esta , quiero comprar este producto: ${prod.nombre} ${urlProducto}`
+    `Hola como esta, quiero comprar este producto: ${prod.nombre} ${urlPublica}`
   );
 
   const whatsapp = `https://wa.me/573246030396?text=${mensaje}`;
@@ -61,7 +66,7 @@ productos.forEach(prod => {
     .replace(/{{DESCRIPCION}}/g, prod.descripcion || "")
     .replace(/{{IMAGEN}}/g, prod.imagen)
     .replace(/{{IMAGENOG}}/g, imagenOG)
-    .replace(/{{URL}}/g, urlProducto)
+    .replace(/{{URL}}/g, urlPublica)   // 👈 URL corta
     .replace(/{{SLUG}}/g, prod.slug)
     .replace(/{{WHATSAPP}}/g, whatsapp);
 
