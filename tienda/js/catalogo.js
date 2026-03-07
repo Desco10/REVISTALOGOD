@@ -116,7 +116,7 @@ Hola, quiero comprar este producto:
 ${prod.nombre}
 Precio: $${prod.precio}
 
-${productoURL}`;
+`;
 
     primerClickRealizado = true;
 
