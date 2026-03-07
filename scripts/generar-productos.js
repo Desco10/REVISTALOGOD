@@ -53,7 +53,7 @@ productos.forEach(prod => {
     `Hola, quiero comprar este producto: ${prod.nombre} ${urlProducto}`
   );
 
-  const whatsapp = `https://wa.me/573000000000?text=${mensaje}`;
+  const whatsapp = `https://wa.me/573246030396?text=${mensaje}`;
 
   let html = template
     .replace(/{{NOMBRE}}/g, prod.nombre)
