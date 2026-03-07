@@ -1016,13 +1016,10 @@ html{
 
 /* ===============================
    RESPONSIVE SOLO PARA PC
-   (No afecta móvil)
 ================================= */
 @media (min-width:1024px){
 
-  /* ===============================
-     GRID CATÁLOGO ESTILO REVISTA
-  ================================= */
+  /* GRID PRINCIPAL */
   #productos{
     display:grid;
     grid-template-columns:repeat(3, 1fr);
@@ -1030,14 +1027,18 @@ html{
     max-width:1400px;
     margin:50px auto;
     padding:0 40px;
+    align-items:stretch; /* todas las cards misma altura */
   }
 
   .producto{
     background:#fff;
     border-radius:14px;
     padding:20px;
-    text-align:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
     transition:all .25s ease;
+    overflow:hidden; /* 🔥 evita desbordes visuales */
   }
 
   .producto:hover{
@@ -1045,18 +1046,24 @@ html{
     box-shadow:0 20px 40px rgba(0,0,0,0.12);
   }
 
-  /* 🔥 IMAGEN SIN RECORTE */
+  /* CONTENEDOR IMAGEN */
   .producto-img{
     width:100%;
-    height:auto;          /* importante */
-    object-fit:contain;   /* evita recorte */
+    height:auto;
+    object-fit:contain;
     margin-bottom:15px;
     display:block;
   }
 
-  /* ===============================
-     CENTRAR CATEGORÍAS
-  ================================= */
+  /* CONTENEDOR INFO */
+  .producto-info{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+  }
+
+  /* CENTRAR CATEGORÍAS */
   .categories{
     display:flex;
     justify-content:center;
