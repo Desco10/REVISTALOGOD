@@ -96,49 +96,47 @@ function renderizarPagina(){
 // ===============================
 // ENVIAR PRODUCTO A WHATSAPP
 // ===============================
-function agregarAlPedidoProducto(id){
+// ENVIAR PRODUCTO A WHATSAPP
+// ===============================
+function agregarAlPedidoProducto(id) {
 
-const prod = productosGlobal.find(p => p.id === id);
-if(!prod) return;
+  const prod = productosGlobal.find(p => p.id === id);
+  if (!prod) return;
 
-const productoURL =
-window.location.origin + "/tienda/producto/" + prod.slug + ".html";
+  const productoURL =
+    window.location.origin + "/tienda/producto/" + prod.slug + ".html";
 
-let mensaje = "";
+  let mensaje = "";
 
-if(!primerClickRealizado){
+  if (!primerClickRealizado) {
 
-mensaje =
-`🛒 Producto recomendado
+    // ✅ URL primero = WhatsApp genera preview visual y "oculta" el link
+    mensaje =
+`${productoURL}
 
+🛒 Producto recomendado
 📦 ${prod.nombre}
-💰 Precio: $${prod.precio}
+💰 Precio: $${prod.precio}`;
 
-👇 Ver producto
-${productoURL}`;
+    primerClickRealizado = true;
 
-primerClickRealizado = true;
+  } else {
 
-}else{
+    mensaje =
+`${productoURL}
 
-mensaje =
-`➕ También quiero agregar
-
+➕ También quiero agregar
 📦 ${prod.nombre}
-💰 Precio: $${prod.precio}
+💰 Precio: $${prod.precio}`;
 
-${productoURL}`;
+  }
 
-}
-
-const wa = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(mensaje)}`;
-
-window.open(wa, "_blank");
+  const wa = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(mensaje)}`;
+  window.open(wa, "_blank");
 
 }
 
 window.agregarAlPedidoProducto = agregarAlPedidoProducto;
-
 
 
 // ===============================
