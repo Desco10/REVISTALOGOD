@@ -1014,41 +1014,56 @@ html{
    No rompe móvil ni tablet
 ================================= */
 
+/* ===============================
+   RESPONSIVE SOLO PARA PC
+   (No afecta móvil)
+================================= */
 @media (min-width:1024px){
 
+  /* ===============================
+     GRID CATÁLOGO ESTILO REVISTA
+  ================================= */
   #productos{
     display:grid;
-    grid-template-columns:repeat(4, 1fr);
-    gap:28px;
+    grid-template-columns:repeat(3, 1fr);
+    gap:35px;
     max-width:1400px;
-    margin:auto;
-    padding:40px 20px;
+    margin:50px auto;
+    padding:0 40px;
   }
 
   .producto{
+    background:#fff;
+    border-radius:14px;
+    padding:20px;
+    text-align:center;
     transition:all .25s ease;
   }
 
   .producto:hover{
     transform:translateY(-6px);
-    box-shadow:0 15px 35px rgba(0,0,0,0.12);
+    box-shadow:0 20px 40px rgba(0,0,0,0.12);
   }
 
+  /* 🔥 IMAGEN SIN RECORTE */
   .producto-img{
-    height:240px;
-    object-fit:cover;
+    width:100%;
+    height:auto;          /* importante */
+    object-fit:contain;   /* evita recorte */
+    margin-bottom:15px;
+    display:block;
   }
 
-  .producto-info{
-    padding:20px;
-  }
-
-  .producto-nombre{
-    font-size:18px;
-  }
-
-  .producto-precio{
-    font-size:20px;
+  /* ===============================
+     CENTRAR CATEGORÍAS
+  ================================= */
+  .categories{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:18px;
+    max-width:1200px;
+    margin:40px auto;
   }
 
 }
