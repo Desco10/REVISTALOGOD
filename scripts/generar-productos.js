@@ -50,7 +50,7 @@ productos.forEach(prod => {
 
   // link whatsapp
   const mensaje = encodeURIComponent(
-    `Hola, quiero comprar este producto: ${prod.nombre} ${urlProducto}`
+    `Hola como esta , quiero comprar este producto: ${prod.nombre} ${urlProducto}`
   );
 
   const whatsapp = `https://wa.me/573246030396?text=${mensaje}`;
