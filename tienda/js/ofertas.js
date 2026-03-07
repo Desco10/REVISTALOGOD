@@ -22,7 +22,7 @@ fetch("data/productos.json")
 
 
 // ===============================
-// WHATSAPP OFERTA
+/// WHATSAPP OFERTA
 // ===============================
 function comprarOfertaProducto(id){
 
@@ -36,27 +36,27 @@ function comprarOfertaProducto(id){
   if(!primerClickOferta){
 
     mensaje =
-`🔥 Oferta recomendada
+`${productoURL}
+
+🔥 Oferta recomendada
 ⭐⭐⭐⭐⭐
 
 Hola, quiero comprar esta oferta:
 
-${prod.nombre}
-Precio: $${prod.precio}
-
-${productoURL}`;
+📦 ${prod.nombre}
+💰 Precio: $${prod.precio}`;
 
     primerClickOferta = true;
 
   } else {
 
     mensaje =
-`🔥 También quiero agregar esta oferta:
+`${productoURL}
 
-${prod.nombre}
-Precio: $${prod.precio}
+🔥 También quiero agregar esta oferta:
 
-${productoURL}`;
+📦 ${prod.nombre}
+💰 Precio: $${prod.precio}`;
 
   }
 
@@ -67,7 +67,6 @@ ${productoURL}`;
 }
 
 window.comprarOfertaProducto = comprarOfertaProducto;
-
 
 
 // ===============================
