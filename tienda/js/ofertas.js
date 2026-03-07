@@ -34,11 +34,11 @@ function comprarOfertaProducto(id){
 
   const productoURL = window.location.origin + "/tienda/producto/" + prod.slug + ".html";
 
-  let mensaje = "";
+let mensaje = "";
 
-  if(!primerClickOferta){
+if(!primerClickOferta){
 
-    mensaje =
+mensaje =
 `🔥 Oferta recomendada
 ⭐⭐⭐⭐⭐
 
@@ -47,6 +47,8 @@ Hola, quiero comprar esta oferta:
 ${prod.nombre} - $${prod.precio}
 
 ${productoURL}`;
+
+
 
     primerClickOferta = true;
 

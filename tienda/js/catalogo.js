@@ -83,15 +83,15 @@ function renderizarPagina(){
 function agregarAlPedidoProducto(id){
 
   const prod = productosGlobal.find(p => p.id === id);
-  if(!prod) return;
+if(!prod) return;
 
-  const productoURL = window.location.origin + "/tienda/producto/" + prod.slug + ".html";
+const productoURL = window.location.origin + "/tienda/producto/" + prod.slug + ".html";
 
-  let mensaje = "";
+let mensaje = "";
 
-  if(!primerClickRealizado){
+if(!primerClickRealizado){
 
-    mensaje =
+mensaje =
 `🛒 Producto recomendado
 ⭐⭐⭐⭐⭐
 
@@ -99,6 +99,8 @@ Hola, quiero comprar este producto:
 ${prod.nombre} - $${prod.precio}
 
 ${productoURL}`;
+
+
 
     primerClickRealizado = true;
 
