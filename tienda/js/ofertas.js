@@ -24,9 +24,6 @@ fetch("data/productos.json")
 // ===============================
 // WHATSAPP OFERTA
 // ===============================
-// ===============================
-// WHATSAPP OFERTA
-// ===============================
 function comprarOfertaProducto(id){
 
   const prod = ofertasGlobal.find(p => p.id === id);
@@ -34,21 +31,20 @@ function comprarOfertaProducto(id){
 
   const productoURL = window.location.origin + "/tienda/producto/" + prod.slug + ".html";
 
-let mensaje = "";
+  let mensaje = "";
 
-if(!primerClickOferta){
+  if(!primerClickOferta){
 
-mensaje =
+    mensaje =
 `🔥 Oferta recomendada
 ⭐⭐⭐⭐⭐
 
 Hola, quiero comprar esta oferta:
 
-${prod.nombre} - $${prod.precio}
+${prod.nombre}
+Precio: $${prod.precio}
 
 ${productoURL}`;
-
-
 
     primerClickOferta = true;
 
@@ -57,7 +53,8 @@ ${productoURL}`;
     mensaje =
 `🔥 También quiero agregar esta oferta:
 
-${prod.nombre} - $${prod.precio}
+${prod.nombre}
+Precio: $${prod.precio}
 
 ${productoURL}`;
 
@@ -66,9 +63,11 @@ ${productoURL}`;
   const wa = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(mensaje)}`;
 
   window.open(wa, "_blank");
+
 }
 
 window.comprarOfertaProducto = comprarOfertaProducto;
+
 
 
 // ===============================
