@@ -101,41 +101,34 @@ function agregarAlPedidoProducto(id){
   const prod = productosGlobal.find(p => p.id === id);
   if(!prod) return;
 
-  const productoURL = window.location.origin + "/tienda/producto/" + prod.slug + ".html";
-
   let mensaje = "";
 
   if(!primerClickRealizado){
 
-    mensaje =
+mensaje =
 `🛒 Producto recomendado
 ⭐⭐⭐⭐⭐
 
 Hola, quiero comprar este producto:
 
 ${prod.nombre}
-Precio: $${prod.precio}
-
-`;
+Precio: $${prod.precio}`;
 
     primerClickRealizado = true;
 
   } else {
 
-    mensaje =
+mensaje =
 `🛒 También quiero agregar este producto:
 
 ${prod.nombre}
-Precio: $${prod.precio}
-
-`;
+Precio: $${prod.precio}`;
 
   }
 
   const wa = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(mensaje)}`;
 
   window.open(wa, "_blank");
-
 }
 
 window.agregarAlPedidoProducto = agregarAlPedidoProducto;
