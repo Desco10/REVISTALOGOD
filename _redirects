@@ -1,1 +1,2 @@
-/p/:slug   /tienda/producto/:slug.html   200
+/tienda/css/*   /tienda/css/:splat   200
+/p/:slug        /tienda/producto/:slug.html   200
