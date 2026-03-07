@@ -98,37 +98,43 @@ function renderizarPagina(){
 // ===============================
 function agregarAlPedidoProducto(id){
 
-  const prod = productosGlobal.find(p => p.id === id);
-  if(!prod) return;
+const prod = productosGlobal.find(p => p.id === id);
+if(!prod) return;
 
-  let mensaje = "";
+const productoURL =
+window.location.origin + "/tienda/producto/" + prod.slug + ".html";
 
-  if(!primerClickRealizado){
+let mensaje = "";
+
+if(!primerClickRealizado){
 
 mensaje =
 `🛒 Producto recomendado
-⭐⭐⭐⭐⭐
 
-Hola, quiero comprar este producto:
+📦 ${prod.nombre}
+💰 Precio: $${prod.precio}
 
-${prod.nombre}
-Precio: $${prod.precio}`;
+👇 Ver producto
+${productoURL}`;
 
-    primerClickRealizado = true;
+primerClickRealizado = true;
 
-  } else {
+}else{
 
 mensaje =
-`🛒 También quiero agregar este producto:
+`➕ También quiero agregar
 
-${prod.nombre}
-Precio: $${prod.precio}`;
+📦 ${prod.nombre}
+💰 Precio: $${prod.precio}
 
-  }
+${productoURL}`;
 
-  const wa = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(mensaje)}`;
+}
 
-  window.open(wa, "_blank");
+const wa = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(mensaje)}`;
+
+window.open(wa, "_blank");
+
 }
 
 window.agregarAlPedidoProducto = agregarAlPedidoProducto;
