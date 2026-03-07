@@ -104,8 +104,7 @@ function agregarAlPedidoProducto(id) {
   if (!prod) return;
 
   const productoURL =
-    window.location.origin + "/tienda/producto/" + prod.slug + ".html";
-
+window.location.origin + "/p/" + prod.slug;
   let mensaje = "";
 
   if (!primerClickRealizado) {

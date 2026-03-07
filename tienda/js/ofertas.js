@@ -29,7 +29,8 @@ function comprarOfertaProducto(id){
   const prod = ofertasGlobal.find(p => p.id === id);
   if(!prod) return;
 
-  const productoURL = window.location.origin + "/tienda/producto/" + prod.slug + ".html";
+  const productoURL =
+window.location.origin + "/p/" + prod.slug;
 
   let mensaje = "";
 
