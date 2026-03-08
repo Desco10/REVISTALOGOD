@@ -45,7 +45,7 @@ productos.forEach(prod => {
     return;
   }
 
-  const urlProducto = `${dominio}/tienda/producto/${prod.slug}.html`;
+  const urlProducto = `${dominio}/p/${prod.slug}`;
   const imagenOG = `${dominio}${prod.imagen}`;
 
   const mensaje = encodeURIComponent(
