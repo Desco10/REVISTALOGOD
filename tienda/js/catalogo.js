@@ -5,7 +5,7 @@ let productosGlobal = [];
 let productosFiltrados = [];
 let paginaActual = 1;
 
-const productosPorPagina = 6;
+const productosPorPagina = 8;
 
 let primerClickRealizado = false;
 
