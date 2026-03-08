@@ -1100,21 +1100,31 @@ html{
    CONTENEDOR CATEGORÍAS PRO
 ========================= */
 
-.categories{
-  background:#ffffff;
-  border:1px solid #e5e5e5;
-  border-radius:14px;
-  padding:18px 25px;
-  max-width:1200px;
-  margin:30px auto;
-  display:flex;
-  justify-content:center;
-  gap:18px;
-  flex-wrap:wrap;
-  transition:all .25s ease;
-}
+/* =========================
+   CATEGORÍAS SOLO PC
+========================= */
+@media (min-width: 992px){
 
-.categories:hover{
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
-  border-color:#dcdcdc;
+  .categories{
+    background:#ffffff;
+    border:1px solid #e5e5e5;
+    border-radius:14px;
+    padding:18px 25px;
+
+    max-width:1200px;
+    margin:30px auto;
+
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+
+    transition:all .25s ease;
+  }
+
+  .categories:hover{
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    border-color:#dcdcdc;
+  }
+
 }
